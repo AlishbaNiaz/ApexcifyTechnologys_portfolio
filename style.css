@@ -1,6 +1,6 @@
 :root {
-  --primary: #ffa51f;
-  --primary-600: #ff8f10;
+  --primary: #ffbd59;
+  --primary-600: #e09e3b;
   --bg-dark: #0b1116;
   --bg-card: #1e1e1e;
   --card-top: #242424;
@@ -23,6 +23,7 @@ html, body {
 }
 
 body {
+  padding-top: 68px;
   margin: 0;
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   color: var(--text-light);
@@ -38,8 +39,10 @@ body {
 }
 
 .nav {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0; 
   background: linear-gradient(180deg, rgba(8,12,16,0.78), rgba(8,12,16,0.54));
   backdrop-filter: blur(6px);
   border-bottom: 1px solid var(--border-color);
@@ -81,6 +84,7 @@ body {
   display: flex;
   gap: 18px;
   align-items: center;
+  z-index: 1100;
 }
 
 .menu a {
@@ -179,7 +183,7 @@ body {
   }
 
   .menu.show {
-    display: flex;
+    display: flex !important;
   }
 
   .burger {
@@ -237,6 +241,22 @@ body {
     transform: translateY(0);
   }
 }
+.typing {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid var(--primary); 
+  width: 0;
+  animation: typing 4s steps(12) infinite;
+}
+
+@keyframes typing {
+  0% { width: 0; }
+  40% { width: 10ch; }   
+  60% { width: 10ch; }   
+  100% { width: 0; }     
+}
+
 
 .grid {
   display: grid;
