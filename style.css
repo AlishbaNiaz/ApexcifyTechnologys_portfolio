@@ -222,7 +222,7 @@ body {
 }
 
 .section {
-  padding: 72px 0;
+  padding: 50px 0;
 }
 
 .section h2 {
@@ -430,62 +430,29 @@ a:focus, button:focus, input:focus, textarea:focus {
   outline-offset: 3px;
 }
 
-@media (max-width: 700px) {
-  .hero {
-    padding: 64px 0 40px;
-  }
-  .card img {
-    height: 160px;
-  }
-  .nav-row {
-    padding: 12px 0;
-  }
-  .brand {
-    font-size: 1rem;
-  }
-  #resume{
-  flex: 0 0 100%;
-  }
-  #resume div:nth-child(1) { order: 1; }
-  #resume div:nth-child(2) { order: 5; }
-  #resume div:nth-child(3) { order: 2; }
-  #resume div:nth-child(4) { order: 6; }
-  #resume div:nth-child(5) { order: 3; }
-  #resume div:nth-child(6) { order: 7; }
-  #resume div:nth-child(7) { order: 4; }
-  #resume div:nth-child(8) { order: 8; }
-
-}
 #info hr,#resume hr{
   border: none;
   height: 1px;
   background-color: var(--primary);
   opacity: 0.5;
 }
-#about div{
-  display: inline-block;
-  z-index: 1;
-}
-#info{
-  right: 100px;
-  position: absolute;
-  
-}
 #about p{
   text-align: justify;
 }
+#about > div{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
 #back_text{
-font-size: 80px; 
+font-size: 5rem; 
 font-weight: bold; 
 color: var(--primary);
 opacity: 0.15;
 z-index: 0;
 }
-#about h2{
-  margin-left: -430px;
-}
-#projects h2,#contact h2,#summary h2{
-  margin-top: -75px;
+#projects h2,#contact h2,#summary h2,#about h2{
+  margin-top: -69px;
 }
 #resume{
   gap: 30px;
@@ -529,6 +496,7 @@ z-index: 0;
   background-image: url("https://www.shutterstock.com/image-illustration/abstract-technological-hexagonal-background-3d-600nw-746328058.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   width: 100vw;
   padding: 100px;
   background-color: rgba(0, 0, 0, 0.6);  
@@ -591,7 +559,77 @@ z-index: 0;
       align-items: center;
       margin-bottom: 10px;
   }
-
   .section-skill{
     padding-top: 70px;
   }
+  #info button{
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, var(--primary), var(--primary-600));
+  color: #000000 !important; 
+  text-decoration: none;
+  font-weight: 800;
+  box-shadow: var(--glow);
+  transition: transform .12s ease, box-shadow .12s ease, border .12s ease;
+  margin: 30px 0px 0px 60px;
+ }
+ #info button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 50px rgba(255,165,31,0.25); 
+  border: 2px solid var(--primary);
+  color: #000000 !important; 
+}
+
+#info button:focus {
+  outline: none;
+  box-shadow: 0 22px 60px rgba(8, 8, 7, 0.22);
+}
+.social-icons {
+  display: flex;
+  gap: 20px;
+  justify-content: center; 
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: var(--text-muted); 
+  font-size: 1.5rem;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+  color: var(--primary); 
+  transform: scale(1.2);
+}
+
+  @media (max-width: 700px) {
+  .hero {
+    padding: 64px 0 40px;
+  }
+  .card img {
+    height: 160px;
+  }
+  .nav-row {
+    padding: 12px 0;
+  }
+  .brand {
+    font-size: 1rem;
+  }
+  #resume{
+  flex: 0 0 100%;
+  }
+  #back_text{
+    font-size: 3.5rem;
+  }
+  #resume div:nth-child(1) { order: 1; }
+  #resume div:nth-child(2) { order: 5; }
+  #resume div:nth-child(3) { order: 2; }
+  #resume div:nth-child(4) { order: 6; }
+  #resume div:nth-child(5) { order: 3; }
+  #resume div:nth-child(6) { order: 7; }
+  #resume div:nth-child(7) { order: 4; }
+  #resume div:nth-child(8) { order: 8; }
+#projects h2,#contact h2,#summary h2,#about h2{
+  margin-top: -45px;
+}
+}
