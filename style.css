@@ -591,16 +591,7 @@ z-index: 0;
       align-items: center;
       margin-bottom: 10px;
   }
-  
-  @media (max-width: 768px) {
-      .skills-container {
-          padding: 20px;
-      }
-      
-      .skills-header h1 {
-          font-size: 2rem;
-      }
-  }
+
   .section-skill{
     padding-top: 70px;
   }
