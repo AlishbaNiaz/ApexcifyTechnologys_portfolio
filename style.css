@@ -451,7 +451,7 @@ color: var(--primary);
 opacity: 0.15;
 z-index: 0;
 }
-#projects h2,#contact h2,#summary h2,#about h2{
+#projects h2,#contact h2,#summary h2,#about h2,#services h2{
   margin-top: -69px;
 }
 #resume{
@@ -600,6 +600,58 @@ z-index: 0;
 .social-icons a:hover {
   color: var(--primary); 
   transform: scale(1.2);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.section-header{
+  margin-bottom:50px;
+}
+.service-card {
+  padding: 30px 20px;
+  border-radius: 10px;
+  border: 1px solid var(--bg-light);
+  box-shadow: 0 5px 15px var(--border-color);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 1px 15px var(--primary);
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color:var(--text-muted);
+}
+
+.service-card p {
+  font-size: 1rem;
+  color:var(--text-muted);
+  line-height: 1.5;
+}
+
+@media (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
   @media (max-width: 700px) {
