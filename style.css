@@ -690,7 +690,7 @@ textarea:focus {
  place-items: center !important; 
 }
 .service-card i{
-    margin-left: 125px;
+    margin-left: 121px;
 }
 .service-card:hover {
   transform: translateY(-10px);
