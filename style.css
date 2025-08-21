@@ -684,7 +684,7 @@ textarea:focus {
   border: 1px solid var(--bg-light);
   box-shadow: 0 5px 15px var(--border-color);
   transition: transform 0.3s, box-shadow 0.3s;
- place-items: center; 
+ place-items: center !important; 
 }
 
 .service-card:hover {
@@ -768,7 +768,8 @@ textarea:focus {
   #projects h2,
   #contact h2,
   #summary h2,
-  #about h2 {
+  #about h2,
+  #services h2 {
     margin-top: -45px;
   }
   
